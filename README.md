@@ -8,6 +8,9 @@
 [image4]: ./4.png "thirty"
 [image5]: ./5.png "left turn ahead"
 [image6]: ./dataset1.png "data analysis"
+[image7]: ./lowlight.png "low light image "
+[image8]: ./tilted.png "image with camera tilt"
+[image9]: ./multiple.png "image with multiple signs"
 
 
 ### Build a Traffic Sign Recognition Project
@@ -44,9 +47,19 @@ I used the pandas library to calculate summary statistics of the traffic signs d
 
 ### 2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. It is a bar chart showing how much train and test data is available for all the different classes. Here an important thing to note is the disparity of the amount of data for different classes which means that for some common classes we will be having lot more images than for some rare class for which a lot of data weren't available. Now this might skew the end results in favor of the more common images which means that the network's ability of spot any image with that common class is much better than for the less common ones. 
 
 ![][image6]
+
+Apart from that I have included images of some random images of signs from multiple classes and this is to show how different conditions are incorporated to make the training robnust. By different conditions, I means various things like low lighting, tilt in the image, background objects in the image etc. These conditions are important as they are present in the real time conditions thus making the network adaptable for the real life conditions.
+
+Some of the images of low lighting, camera tilt and multiple objects below in the respective order:
+
+![][image7]
+
+![][image8]
+
+![][image9]
 
 ## Design and Test a Model Architecture
 
@@ -97,10 +110,12 @@ Finally, the output layer returns 43 classes by using weights = 86x43 and baises
 
 The following parameters describes how I trained my model:
 1. Optimizer : Adam optimizer.
-2. Batch Size: 18
-3. Epochs =20
+2. Batch Size: 130
+3. Epochs =25
 4. Hyperparameters: mean=0, standard deviation = 0.5.
 5. Dropout: training=0.5, evaluation=1.
+
+Now for choosing the hyperparameters the job was very interesting and has a lot of insights. Here an important aspect of the model was to keep the mean 0 and and equal variance thus these hyperparameters were chosen at first. Then I tried to play with the standart deviation which for smaller values did not work well and the larger values took a lot of time to train so I optimized and settelled at a value of 0.5.
 
 Using all these parameters the model achieved the following results:
 1. Maximum validation accuracy : 99.6% at 18th epoch
