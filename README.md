@@ -2,11 +2,11 @@
 
 [//]: # (Image References)
 
-[image1]: ./1.jpg "no entry"
-[image2]: ./2.jpg "fifty"
-[image3]: ./3.jpg "stop"
-[image4]: ./4.jpg "thirty"
-[image5]: ./5.jpg "left turn ahead"
+[image1]: ./1.png "no entry"
+[image2]: ./2.png "fifty"
+[image3]: ./3.png "stop"
+[image4]: ./4.png "thirty"
+[image5]: ./5.png "left turn ahead"
 [image6]: ./dataset1.png "data analysis"
 
 
