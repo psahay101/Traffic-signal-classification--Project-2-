@@ -131,3 +131,47 @@ Images: No entry, 50 speed limit, stop, 30 speed limit, left turn ahead
 predictions: No entry, yield, stop, 30 speed limit, left turn ahead
 
 So as 4 out of 5 images were correctly classified, accuracy was 80%.
+
+## 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+
+For the first image, the model is relatively sure that this is a no entry sign (probability of 100%). The top five soft max probabilities were:
+
+No entry : 100.0%
+Bumpy road : 2.112447577973242e-08%
+Stop : 3.6358679955661444e-09%
+Bicycles crossing : 2.7259972403025686e-13%
+Children crossing : 2.1470417769945614e-14%
+
+
+Image 2 has been wrongly classified as 60 km/hr. Its top 5 softmax probabilities are:
+
+Speed limit (60km/h) : 70.11036276817322%
+Speed limit (50km/h) : 28.676587343215942%
+No vehicles : 0.8481469005346298%
+Yield : 0.16287651378661394%
+Stop : 0.11768729891628027%
+
+
+Image 3 has been rightly classified as stop. Its top 5 softmax probabilities are:
+
+Stop : 99.99973773956299%
+No entry : 0.000243884232986602%
+Yield : 2.0220899443756934e-05%
+Go straight or right : 2.3429723938761526e-06%
+Traffic signals : 1.4621592825392327e-06%
+
+Image 4 has been rightly classified as 30 km/hr. Its top 5 softmax probabilities are:
+
+Speed limit (30km/h) : 99.99996423721313%
+Speed limit (50km/h) : 3.458345645412919e-05%
+Speed limit (20km/h) : 6.209240899224255e-08%
+Speed limit (60km/h) : 2.1442728148635126e-08%
+Speed limit (80km/h) : 6.720077272426295e-09%
+
+Image 5 has been rightly classified as left turn ahead. Its top 5 softmax probabilities are:
+
+Turn left ahead : 85.64892411231995%
+Ahead only : 14.267198741436005%
+Roundabout mandatory : 0.0638321740552783%
+Children crossing : 0.014127448957879096%
+Beware of ice/snow : 0.003844018283416517%
