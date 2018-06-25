@@ -1,5 +1,15 @@
 # Traffic Sign Recognition
 
+[//]: # (Image References)
+
+[image1]: ./1.png "no entry"
+[image2]: ./2.png "fifty"
+[image3]: ./3.png "stop"
+[image4]: ./4.png "thirty"
+[image5]: ./5.png "left turn ahead"
+[image6]: ./dataset1.png "data analysis"
+
+
 ### Build a Traffic Sign Recognition Project
 
 The goals / steps of this project are the following:
@@ -36,6 +46,7 @@ I used the pandas library to calculate summary statistics of the traffic signs d
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
 
+![][image6]
 
 ## Design and Test a Model Architecture
 
@@ -109,7 +120,12 @@ So a final change of changing the dropout to 1 was made which got the accuracy t
 Here are eight German traffic signs that I found on the web:
 
 
-# Image Here
+![][image1]
+![][image2]
+![][image3]
+![][image4]
+![][image5]
+
 
 1. First sign is a no entry sign which I think would be tricky to classify as there is a tilt in the image which might cause problems.
 
